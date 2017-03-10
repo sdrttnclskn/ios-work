@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Desing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ada Sahilerinde Bekliyorum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-LR-PyL">
+                                <rect key="frame" x="86" y="53" width="227" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="IFh-9y-tAH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-Um-W0M">
+                                <rect key="frame" x="129" y="603" width="118" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="6VI-db-1oV"/>
+                                    <constraint firstAttribute="height" constant="44" id="Vkz-5t-8tN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Söyle"/>
+                                <connections>
+                                    <action selector="soyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOe-75-Wz0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deo-Nv-wqK">
+                                <rect key="frame" x="0.0" y="171" width="375" height="348"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49206353420953597" green="1" blue="0.656175786680947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MMg-LR-PyL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="LQC-aB-ewr"/>
+                            <constraint firstItem="MMg-LR-PyL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="LcK-T3-C3Q"/>
+                            <constraint firstItem="deo-Nv-wqK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eMv-Qw-oaz"/>
+                            <constraint firstItem="deo-Nv-wqK" firstAttribute="top" secondItem="MMg-LR-PyL" secondAttribute="bottom" constant="26" id="iZ7-Zb-3yd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MMg-LR-PyL" secondAttribute="trailing" constant="46" id="jaw-ev-h4E"/>
+                            <constraint firstItem="jUx-Um-W0M" firstAttribute="top" secondItem="deo-Nv-wqK" secondAttribute="bottom" constant="84" id="jea-Hw-rxa"/>
+                            <constraint firstAttribute="trailing" secondItem="deo-Nv-wqK" secondAttribute="trailing" id="lMR-0q-wQh"/>
+                            <constraint firstAttribute="bottom" secondItem="jUx-Um-W0M" secondAttribute="bottom" constant="20" symbolic="YES" id="pE7-El-0cO"/>
+                            <constraint firstItem="deo-Nv-wqK" firstAttribute="centerX" secondItem="jUx-Um-W0M" secondAttribute="centerX" id="s4l-v2-5qL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="deo-Nv-wqK" id="ZVV-lE-IXb"/>
+                        <outlet property="textName" destination="MMg-LR-PyL" id="6Wa-Vo-HPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="30"/>
+        </scene>
+    </scenes>
+</document>
