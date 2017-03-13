@@ -40,10 +40,14 @@ class ViewController: UIViewController {
     }
     @IBAction func bolme(_ sender: Any) {
         if let sayi1 = Int(input1.text!) , let sayi2 = Int(input2.text!)
-        {
+        {    if sayi2 == 0
+              {
+                 uyariButton()
+            } else
+             {
             let result = sayi1 / sayi2
             sonuc.text = "Sonuç : \(result)"
-            
+             }
         }
         else
         {
