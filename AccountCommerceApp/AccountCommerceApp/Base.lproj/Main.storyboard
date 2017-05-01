@@ -127,11 +127,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6UR-Lu-KeH">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6UR-Lu-KeH">
                                 <rect key="frame" x="49" y="233" width="51" height="31"/>
+                                <connections>
+                                    <action selector="TekCekim:" destination="UQK-gN-JGm" eventType="valueChanged" id="46m-Yo-PPA"/>
+                                </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-8N-xZQ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-8N-xZQ">
                                 <rect key="frame" x="235" y="233" width="51" height="31"/>
+                                <connections>
+                                    <action selector="Taksit:" destination="UQK-gN-JGm" eventType="valueChanged" id="Abi-Ib-8XA"/>
+                                </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-l2-h1S">
                                 <rect key="frame" x="125" y="238" width="80" height="20.333333333333314"/>
@@ -185,11 +191,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-53-nQk">
-                                <rect key="frame" x="87" y="443" width="240" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gn4-xR-gXr">
+                                <rect key="frame" x="66" y="444" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-Hi-xHd">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.70238578774650051" blue="0.40466321781788062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -215,7 +228,7 @@
                         <outlet property="switchTaksit" destination="4hG-8N-xZQ" id="drd-7D-A9z"/>
                         <outlet property="switchTekCekim" destination="6UR-Lu-KeH" id="iBZ-44-RSW"/>
                         <outlet property="tfTaksitSayısı" destination="pJU-f7-tKC" id="XcN-Gm-PgF"/>
-                        <outlet property="tvtTaksitSonucu" destination="kgN-53-nQk" id="wMN-NR-j1p"/>
+                        <outlet property="tvSonuc" destination="f3M-Hi-xHd" id="cLG-pI-Z6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2n9-Q5-55P" userLabel="First Responder" sceneMemberID="firstResponder"/>

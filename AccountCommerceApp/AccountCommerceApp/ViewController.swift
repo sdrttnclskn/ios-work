@@ -34,8 +34,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue"{
     
-            let dest = segue.destination as! AnaSayfaController
-            dest.KullanıcıAdı = tfKullanıcıAdı.text
+            let dest = segue.destination as? AnaSayfaController
+            dest?.KullanıcıAdı = tfKullanıcıAdı.text!
         }
     }
 
